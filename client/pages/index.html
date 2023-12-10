@@ -5,56 +5,39 @@
     <title>Lester's Ice Cream</title>
     <link rel="stylesheet" href="../src/styles/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
-
-<!-- 320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV -->
 
 <body>
 
-    <nav class="">
-        <ul class="">
-            <li><a class="navigation__links" href="./index.html">Home</a></li>
-            <li><a class="navigation__links" href="./flavors.html">Flavors</a></li>
-            <li><a class="navigation__links" href="./process.html">Process</a></li>
+    <nav class="navbar">
+        <img src="" alt="Company Logo">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="../pages/index.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/flavors.html">Flavors</a></li>
+          <li class="nav-item"><a href="../pages/process.html">Process</a></li>
+          <li class="nav-item"><a href="../pages/order.html">Order</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">About</a></li>
         </ul>
-
-        <img src="" alt="Lesters" class="logo">
-
-        <ul class="">
-            <li><a class="navigation__links" href="./order.html">Order</a></li>
-            <li><a class="navigation__links" href="./contact.html">Contact</a></li>
-            <li><a class="navigation__links" href="./about.html">About</a></li>
-        </ul>
-    </nav>
+      </nav>
+      
 
     <main class="main">
 
-        <header class="highlights">
+        <header class="layout__highlights">
 
-            <div class="highlight highlight__strawberry strawberry" style="background-color: pink;">
-                <img src="../assets/images/ice_cream/strawberry_icecream.png" class="strawberry__ice-cream">
-                <!-- <div class="highlight__circle strawberry__circle strawberry__circle1"></div>
-                <div class="highlight__circle strawberry__circle strawberry__circle2"></div>
-                <div class="highlight__circle strawberry__circle strawberry__circle3"></div>
-                <div class="highlight__circle strawberry__circle strawberry__circle4"></div> -->
-            </div>
-            <div class="highlight chocolate" style="background-color: #A7796D;">
-                <img src="../assets/images/ice_cream/chocolate_icecream.png" class="strawberry__ice-cream">
-            </div>
-            <div class="highlight cookiescream" style="background-color: #d6c7bb;">
-                <img src="../assets/images/ice_cream/cookiesNcream_icecream.png" class="strawberry__ice-cream">
-            </div>
-            <div class="highlight ube" style="background-color: #8878c3;">
-                <img src="../assets/images/ice_cream/ube_icecream.png" class="strawberry__ice-cream">
-            </div>
+            <h1 class="highlights__header">LESTER'S <br>ICE CREAM</h1>
+            <img src="../assets/images/ice_cream/ube_icecream.png" class="strawberry__ice-cream">
 
         </header>
 
-        <section class="made" style="background-color: snow;">
+        <section class="layout__made" style="background-color: snow;">
             <h1 class="made__header">HOW IT'S MADE</h1>
             <h1 class="made__hook">INGREDIENTS LOCALLY SOURCED. CREATED THE FILIPINO WAY.</h1>
 
@@ -72,6 +55,7 @@
                     <h1 class="made__blockTitle" style="font-size: 1.2rem; color: #6c4578;">NATURAL INGREDIENTS FOR NATURAL FLAVORS</h1>
                 </div>
             </div>
+            
             <div class="made__wrapper2">
                 <div class="made__block" style="background-color: #9cadce;">
                     <img src="../assets/icons/ice-cube.png" alt="" class="made__blockImage">
@@ -91,7 +75,7 @@
 
         </section>
 
-        <section class="schedule" style="background-color: #ffebcd;">
+        <section class="layout__schedule" style="background-color: #ffebcd;">
             <div class="schedule__wrapper">
                 <h2 class="schedule__header">WERE CURRENTLY</h2>
                 <h1 class="schedule__status">OPEN</h1>
@@ -99,7 +83,7 @@
 
         </section>
 
-        <section class="block__links">
+        <section class="layout__block__links">
             <div class="block__link block__link__one">
                 <h2 class="block__link__text">GRAB A TASTE</h2>
             </div>
@@ -121,7 +105,7 @@
             </div>
 
             <div class="block__link block__link__six">
-                <h2 class="block__link__text">random image</h2>
+                <h2 class="block__link__text"></h2>
             </div>
 
             <div class="block__link block__link__seven">
@@ -129,7 +113,7 @@
             </div>
         </section>
 
-        <section class="story">
+        <section class="layout__story">
             
             <div class="story__color-division">
 
@@ -144,33 +128,9 @@
                 <a class="story__readmore">Read our story ➜</a>
             </div>
 
-            <div class="story__image">
-
-                <div class="custom-shape-divider-top-1697853761">
-                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
-                        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
-                        <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
-                    </svg>
-                </div>
-
-                <img src="../assets/images/photo1.jpg" class="story__image1">
-                <img src="../assets/images/photo2.jpg" class="story__image2">
-                <img src="../assets/images/photo3.jpg" class="story__image3">
-                <img src="../assets/images/photo4.jpg" class="story__image4">
-
-                <div class="story__imagesWrapper--mobile">
-                    <img src="../assets/images/photo1.jpg">
-                    <img src="../assets/images/photo2.jpg">
-                    <img src="../assets/images/photo3.jpg">
-                    <img src="../assets/images/photo4.jpg">
-                </div>
-
-            </div>
-
         </section>
 
-        <section class="testimonies">
+        <section class="layout__testimonies">
 
             <h1 class="testimonies__header">SOME HAPPY CUSTOMERS</h1>
 
@@ -180,6 +140,7 @@
                     <div class="testimony__info">Marleen Acoba</div>
                     <div class="testimony__message">
                         <img src="../assets/icons/quotation.svg" class="testimony__quote">
+                        <p class="message">A taste I would never forget!</p>
                     </div>
                 </div>
 
@@ -188,6 +149,7 @@
                     <div class="testimony__info">Jose Sammy Calma</div>
                     <div class="testimony__message">
                         <img src="../assets/icons/quotation.svg" class="testimony__quote">
+                        <p class="message">If this is considered "dirty ice cream", I'd rather it not be clean.</p>
                     </div>
                 </div>
 
@@ -196,21 +158,24 @@
                     <div class="testimony__info">Joanne Salazar</div>
                     <div class="testimony__message">
                         <img src="../assets/icons/quotation.svg" class="testimony__quote">
+                        <p class="message">Perfect for any occasion and it is worth every cent!</p>
                     </div>
                 </div>
             </div>
 
 
         </section>
-        <section class="ending">
+
+        <section class="layout__ending">
             <h1 class="ending__header">SWEETNESS <br> <p style="font-family: var(--lilitaOne); letter-spacing: 0.05rem; text-align: center;">IN EVERYDAY LIFE!</p></h1>
             <img src="" alt="" class="ending__logo">
         </section>
 
-        <footer class="footer">
-            <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
-        </footer>
     </main>
+
+    <footer class="footer">
+            <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+    </footer>
 
 </body>
 <script src="../src/scripts/index.js"></script>

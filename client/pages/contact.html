@@ -41,14 +41,14 @@
 
                     <div class="form__nameWrapper">
                         <input type="text" style="display: inline; width: 50%;" placeholder="FIRST NAME">
-                        <input type="text" style="display: inline; width: 49.2%;" placeholder="LAST NAME">
+                        <input type="text" style="display: inline; width: 49.2%;" placeholder="LAST NAME" class="form__lastName">
                     </div>
 
                     <div class="form__emailWrapper">
                         <input type="email" style="width: 100%;" placeholder="EMAIL">
                     </div>
 
-                    <textarea cols="30" rows="10" style="width: 500px; height: 210px; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);" placeholder="MESSAGE" ></textarea>
+                    <textarea cols="30" rows="10" style="height: 210px; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);" placeholder="MESSAGE" ></textarea>
 
                     <div class="form__buttonWrapper">
                         <button type="submit">SEND</button>
@@ -71,27 +71,14 @@
             </div>
 
         </section>
-
+ 
         <section class="layout__location">
             <div class="layout__locationInfo">
 
-                <div class="locationInfo__heading">OUR LOCATION!</div>
-                <div class="locationInfo__address">Madapdap, Mabalacat, Pampanga</div>
+                <h1 class="locationInfo__heading">OUR LOCATION!</h1>
+                <address class="locationInfo__address">Madapdap, Mabalacat, Pampanga</address>
 
             </div>
-
-            <!-- <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe src="https://maps.google.com/maps?q=6JC5+WGP,%20Mabalacat,%20Pampanga&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 100%; height: 100%;">
-                    </iframe>
-                    <style>.mapouter{position:relative;height:100%;width:100%;background:#fff;} .maprouter a{color:#fff !important;position:absolute !important;top:0 !important;z-index:0 !important;}
-                    </style><a href="https://blooketjoin.org/blooket-host/">blooket host</a>
-
-                    <style>.gmap_canvas{overflow:hidden;height:100%;width:100%}.gmap_canvas iframe{position:relative;z-index:2}
-                    </style>
-
-                    </div>
-                </div> -->
 
             <div style="overflow:hidden;max-width:100%;width:100%;height:100%;">
                 <div id="embed-map-canvas" style="height:100%; width:100%;max-width:100%;">
@@ -105,16 +92,16 @@
         </section>
 
         <section class="layout__schedule">
-            <div class="schedule__status">OPEN</div>
-            <div class="schedule__time">5:00AM — 7:00PM</div>
-            <div class="schedule__day">MON • TUES • WED • THURS • FRI • SAT • SUN</div>
+            <h1 class="schedule__status">OPEN</h1>
+            <p class="schedule__time">5:00AM — 7:00PM</p>
+            <p class="schedule__day">MON • TUES • WED • THURS • FRI</p>
         </section>
 
-        <footer class="footer">
-            <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
-        </footer>
-
     </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+    </footer>
     
 </body>
 </html>

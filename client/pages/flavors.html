@@ -5,21 +5,24 @@
     <title>Lester's Ice Cream</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="../src/styles/flavors.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
-    <nav class="">
-        <ul class="">
-            <li><a class="navigation__links" href="./index.html">Home</a></li>
-            <li style="    box-shadow: 0px -5px 0px 0px rgba(255,192,203,0.75) inset;"><a class="navigation__links" href="./flavors.html" style="color: var(--currentPrimary);">Flavors</a></li>
-            <li><a class="navigation__links" href="./process.html">Process</a></li>
-        </ul>
 
-        <img src="" alt="Lesters" class="logo">
-
-        <ul class="">
-            <li><a class="navigation__links" href="./order.html">Order</a></li>
-            <li><a class="navigation__links" href="./contact.html">Contact</a></li>
-            <li><a class="navigation__links" href="./about.html">About</a></li>
+    <nav class="navbar">
+        <img src="" alt="Company Logo">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="../pages/index.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/flavors.html">Flavors</a></li>
+          <li class="nav-item"><a href="../pages/process.html">Process</a></li>
+          <li class="nav-item"><a href="../pages/order.html">Order</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">About</a></li>
         </ul>
     </nav>
 
@@ -43,9 +46,9 @@
                     <div class="flavor__info strawberry_flavor">
                         <div class="flavor__infoWrapper strawberry_flavor">
                             <h2 class="flavor__info__heading strawberry_flavor">STRAWBERRY</h2>
-                            <div class="flavor__info__content strawberry_flavor">
-                                A classic. Experience a sweet but familiar taste with our strawberry ice cream. Made with the finest strawberries sourced, sweet and fruity to the core, we make sure our strawberry ice cream brings out the true original taste of strawberries with no artificial sweeteners to bring out that sweet and tarty flavor. 
-                            </div>
+                            <article class="flavor__info__content strawberry_flavor">
+                                Indulge in nostalgia with our Classic Strawberry Ice Cream, where tradition meets perfection. Crafted from the ripest, handpicked strawberries, it embodies the authentic essence of this beloved fruit. No artificial sweeteners, just the pure, sweet-tart delight of strawberries in every bite. Savor the timeless taste of summer with each creamy spoonful, and relish the genuine flavors that make this ice cream a cherished classic.                            
+                            </article>
                             <button class="flavor__info__button strawberry_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/strawberry.png" class="flavor__strawberry__image">
                         </div>
@@ -59,9 +62,9 @@
                     <div class="flavor__info chocolate_flavor">
                         <div class="flavor__infoWrapper chocolate_flavor">
                             <h2 class="flavor__info__heading chocolate_flavor">CHOCOLATE</h2>
-                            <div class="flavor__info__content chocolate_flavor">
-                                You can’t go wrong with good old chocolate! Our Chocolate ice cream is made from the finest ingredients to ensure the consistency of its flavor. Just the right balance of chocolaty goodness and sweet and milky makes our chocolate ice cream one you won’t forget! 
-                            </div>
+                            <article class="flavor__info__content chocolate_flavor">
+                                Discover the essence of chocolate bliss in every bite with our premium Chocolate Symphony ice cream. Carefully created from the finest ingredients, it promises a consistently rich, velvety flavor that captures the true essence of cocoa. The perfect harmony of intense chocolate goodness and just the right amount of sweetness guarantees an unforgettable chocolate experience. Prepare to be enchanted by the creamy perfection that defines our chocolate ice cream, leaving your taste buds longing for more.
+                            </article>
                             <button class="flavor__info__button chocolate_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/chocolate.png" class="flavor__chocolate__image">
                         </div>
@@ -75,9 +78,9 @@
                     <div class="flavor__info cookiesncream_flavor">
                         <div class="flavor__infoWrapper cookiesncream_flavor">
                             <h2 class="flavor__info__heading cookiesncream_flavor">COOKIES N' CREAM</h2>
-                            <div class="flavor__info__content cookiesncream_flavor">
-                                An explosion of chocolate and milky goodness, our Cookies and Cream ice cream brings you the familiar taste of sweet and sugary vanilla ice cream and a generous amount of chocolate biscuits that brings the crunch. A must have for those with an aching for a sugary cold snack.
-                            </div>
+                            <article class="flavor__info__content cookiesncream_flavor">
+                                Dive into a flavor explosion with our Cookies and Cream ice cream, a delightful fusion of creamy vanilla sweetness and a generous cascade of chocolate biscuits for that perfect crunch. It's a delectable indulgence that satisfies both your sweet tooth and your craving for a chilly treat. Experience the harmonious dance of flavors in every spoonful, making it an absolute must-try for anyone seeking the ultimate sweet and cold delight.                            
+                            </article>
                             <button class="flavor__info__button cookiesncream_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/cookiesncream.png" class="flavor__cookiesncream__image">
                         </div>
@@ -91,9 +94,9 @@
                     <div class="flavor__info ube_flavor">
                         <div class="flavor__infoWrapper ube_flavor">
                             <h2 class="flavor__info__heading ube_flavor">UBE</h2>
-                            <div class="flavor__info__content ube_flavor">
-                                A favorite among us Filipinos. Ube flavored ice cream is a natural delicacy for us in the Philippines and a must have for those visiting overseas.  Our ice cream brings an earthy snack with that all familiar sweet and nutty goodness.
-                            </div>
+                            <article class="flavor__info__content ube_flavor">
+                                A cherished favorite among Filipinos, our Ube flavored ice cream is a natural culinary treasure of the Philippines, and a delightful must-try for international visitors. Our ice cream encapsulates the earthy essence of this indigenous delight, delivering a perfect blend of sweet and nutty goodness. Whether you're a local aficionado or a curious traveler, it's a 60-word journey to savor the unique flavors of the Philippines.                            
+                            </article>
                             <button class="flavor__info__button ube_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/ube.png" class="flavor__ube__image">
                         </div>
@@ -107,9 +110,9 @@
                     <div class="flavor__info mango_flavor">
                         <div class="flavor__infoWrapper mango_flavor">
                             <h2 class="flavor__info__heading mango_flavor">MANGO</h2>
-                            <div class="flavor__info__content mango_flavor">
-                                Get a punch from our sweet and fruity Mango Ice Cream! Our mango flavored ice cream uses the finest and ripest mangoes to bring you this sweet and creamy tropical delight, a must have for those aching for some sweet and fruity delights.
-                            </div>
+                            <article class="flavor__info__content mango_flavor">
+                                Energize your taste buds with the vibrant punch of our Mango Ice Cream! Crafted from the choicest, sun-ripened mangoes, it delivers a sweet, creamy tropical delight that's impossible to resist. Whether you're yearning for a fruity escape or simply craving something sweet, our mango-flavored ice cream is a must-have treat that embodies the essence of tropical indulgence, leaving you refreshed and satisfied.                            
+                            </article>
                             <button class="flavor__info__button mango_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/mango.png" class="flavor__mango__image">
                         </div>
@@ -123,9 +126,9 @@
                     <div class="flavor__info melon_flavor">
                         <div class="flavor__infoWrapper melon_flavor">
                             <h2 class="flavor__info__heading melon_flavor">MELON</h2>
-                            <div class="flavor__info__content melon_flavor">
-                                Another tropical Delicacy. Have a unique experience with a rather unique flavor that you don’t find often. Our Melon ice cream gives you a new, refreshing, and sweet sensation that’s perfect for those hot summer days. 
-                            </div>
+                            <article class="flavor__info__content melon_flavor">
+                                Embark on a tropical adventure with our Melon Ice Cream, a rarity that promises a uniquely refreshing and sweet sensation. Savor the novelty of this exotic flavor, a delightful departure from the ordinary, perfect for beating the summer heat. Dive into a world of cool, sweet indulgence, and let the tantalizing taste of melon transport you to sun-kissed paradise, one scoop at a time.                            
+                            </article>
                             <button class="flavor__info__button melon_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/melon.png" class="flavor__melon__image">
                         </div>
@@ -139,9 +142,9 @@
                     <div class="flavor__info buko_flavor">
                         <div class="flavor__infoWrapper buko_flavor">
                             <h2 class="flavor__info__heading buko_flavor">BUKO</h2>
-                            <div class="flavor__info__content buko_flavor">
-                                A true tropical treat. A sweet and refreshing taste that mixes the tropical essence of buko and the creamy delight of ice cream. Our buko ice cream is another great companion for those hot sunny days that brings you the relaxing experience of a beach goer in the tropics.
-                            </div>
+                            <article class="flavor__info__content buko_flavor">
+                                Indulge in a tropical paradise with our Buko Ice Cream, a harmonious blend of coconut's tropical essence and the luscious creaminess of ice cream. Perfect for scorching summer days, it transports you to the serene shores of a tropical beach, offering a sweet and refreshing experience that captures the essence of a carefree day in the tropics. Treat yourself to a soothing escape with every delightful scoop.                            
+                            </article>
                             <button class="flavor__info__button buko_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/buko.png" class="flavor__buko__image">
                         </div>
@@ -155,9 +158,9 @@
                     <div class="flavor__info bukoPandan_flavor">
                         <div class="flavor__infoWrapper bukoPandan_flavor">
                             <h2 class="flavor__info__heading bukoPandan_flavor">BUKO PANDAN</h2>
-                            <div class="flavor__info__content bukoPandan_flavor">
-                                Another Filipino Favorite. Our Buko Pandan ice cream mixes the sweet and fruity taste of young coconut with the aromatic and nutty taste of pandan, add some gelati, cream and sugar and you have a vibrant and explosive mix of sweet, nutty, and fruity delight. 
-                            </div>
+                            <article class="flavor__info__content bukoPandan_flavor">
+                                Experience a burst of Filipino flavors with our Buko Pandan Ice Cream, a mesmerizing fusion of young coconut's sweet, fruity notes and the aromatic, nutty embrace of pandan. Crafted with precision and care, this vibrant concoction combines gelato, cream, and sugar to create an explosion of sweetness, nuttiness, and fruity delight. Immerse yourself in the artistry of Filipino cuisine with every luxurious scoop of this tropical treat.                            
+                            </article>
                             <button class="flavor__info__button bukoPandan_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/bukoPandan.png" class="flavor__bukoPandan__image">
                         </div>
@@ -171,9 +174,9 @@
                     <div class="flavor__info langka_flavor">
                         <div class="flavor__infoWrapper langka_flavor">
                             <h2 class="flavor__info__heading langka_flavor">LANGKA</h2>
-                            <div class="flavor__info__content langka_flavor">
+                            <article class="flavor__info__content langka_flavor">
                                 A unique and distinct delicacy. Our Langa ice cream combines the fruity and unique flavor of ripe langka with the creamy goodness of ice cream. With the langka’s unique taste that tastes like a mix of pineapples, bananas and mangoes and smooth and creamy texture of ice cream comes a unique and refreshing flavor of ice cream to spice up your day and taste buds with this new and exotic delicacy.
-                            </div>
+                            </article>
                             <button class="flavor__info__button langka_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/langka.png" class="flavor__langka__image">
                         </div>
@@ -187,9 +190,9 @@
                     <div class="flavor__info macapuno_flavor">
                         <div class="flavor__infoWrapper macapuno_flavor">
                             <h2 class="flavor__info__heading macapuno_flavor">MACAPUNO</h2>
-                            <div class="flavor__info__content macapuno_flavor">
-                                Yet another Filipino favorite. Our Makapuno ice cream brings out the sweet and creamy taste of makapuno into frozen form. Mixed with the right amount of milk and bits of makapuno coconut meat brings a sweet, creamy, and exotic experience like no other.
-                            </div>
+                            <article class="flavor__info__content macapuno_flavor">
+                                Explore the heart of Filipino culinary traditions with our Macapuno Ice Cream, a captivating transformation of sweet and creamy makapuno into a frozen masterpiece. Enriched with just the right proportion of milk and luscious makapuno coconut bits, it unveils a sweet, creamy, and exotic journey that's truly unparalleled. Immerse yourself in the unique flavors of the Philippines with every sumptuous spoonful, savoring an experience like no other.                            
+                            </article>
                             <button class="flavor__info__button macapuno_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/macapuno.png" class="flavor__macapuno__image">
                         </div>
@@ -203,9 +206,9 @@
                     <div class="flavor__info avocado_flavor">
                         <div class="flavor__infoWrapper avocado_flavor">
                             <h2 class="flavor__info__heading avocado_flavor">AVOCADO</h2>
-                            <div class="flavor__info__content avocado_flavor">
+                            <article class="flavor__info__content avocado_flavor">
                                 A refreshing choice for those looking for a fruity snack. Our Avocado ice cream gives you a creamy, nutty, and fruity experience that brings out the natural flavors of Avocado mixed with the soothing and refreshing texture of ice cream to bring you this unique and fruity delight.
-                            </div>
+                            </article>
                             <button class="flavor__info__button avocado_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/avocado.png" class="flavor__avocado__image">
                         </div>
@@ -219,9 +222,9 @@
                     <div class="flavor__info cheese_flavor">
                         <div class="flavor__infoWrapper cheese_flavor">
                             <h2 class="flavor__info__heading cheese_flavor">CHEESE</h2>
-                            <div class="flavor__info__content cheese_flavor">
+                            <article class="flavor__info__content cheese_flavor">
                                 A creamy and cheesy delight. Cheese brought to frozen form, our Cheese ice cream combines the creamy and savory taste of cheese with smooth and refreshing texture of ice cream into savory mix sure to impress cheese lovers looking for a cold and refreshing snack.
-                            </div>
+                            </article>
                             <button class="flavor__info__button cheese_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/cheese.png" class="flavor__cheese__image">
                         </div>
@@ -237,8 +240,9 @@
                     <div class="flavor__info buko_flavorsh">
                         <div class="flavor__infoWrapper buko_flavor">
                             <h2 class="flavor__info__heading buko_flavor">BUKO</h2>
-                            <div class="flavor__info__content buko_flavor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, blanditiis sapiente, non excepturi neque qui optio tempora magni doloribus vitae cum reiciendis, aliquid id fugit facilis illo error odio nam.
-                            Officia illum magni maxime ipsam qui ullam nobis amet repellendus reiciendis doloribus, blanditiis ratione minus tempora repudiandae facere dolores ex, inventore beatae aspernatur excepturi?</div>
+                            <article class="flavor__info__content buko_flavor">
+                                Discover the tropical delight of our Buko Sherbet, a refreshing sensation that captures the essence of young coconut. Blended to perfection with the purest coconut goodness, this sherbet offers a cool, fruity, and creamy experience that's both invigorating and irresistible. Transport yourself to a beachside paradise with each delightful spoonful, and relish the tropical magic that defines this exotic treat.
+                            </article>
                             <button class="flavor__info__button buko_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/buko.png" class="flavor__buko__image">
                         </div>
@@ -252,8 +256,9 @@
                     <div class="flavor__info bukoPandan_flavorsh">
                         <div class="flavor__infoWrapper bukoPandan_flavor">
                             <h2 class="flavor__info__heading bukoPandan_flavor">BUKO PANDAN</h2>
-                            <div class="flavor__info__content bukoPandan_flavor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, blanditiis sapiente, non excepturi neque qui optio tempora magni doloribus vitae cum reiciendis, aliquid id fugit facilis illo error odio nam.
-                            Officia illum magni maxime ipsam qui ullam nobis amet repellendus reiciendis doloribus, blanditiis ratione minus tempora repudiandae facere dolores ex, inventore beatae aspernatur excepturi?</div>
+                            <article class="flavor__info__content bukoPandan_flavor">
+                                Embark on a flavor adventure with our Buko Pandan Sherbet, where the sweetness of young coconut meets the fragrant allure of pandan leaves. Meticulously crafted, this sherbet offers a refreshing and exotic experience that will transport your taste buds to a tropical paradise. Each spoonful unveils a symphony of flavors, perfectly balancing sweet, nutty, and fruity notes, making it a captivating and memorable indulgence inspired by the heart of Filipino cuisine.
+                            </article>
                             <button class="flavor__info__button bukoPandan_flavor"><a>HAVE A TASTE</a></button>
                             <img src="../assets/images/flavors/bukoPandan.png" class="flavor__bukoPandan__image">
                         </div>
@@ -262,10 +267,11 @@
             </div>
         </section>
         
-        <footer class="footer">
-            <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
-        </footer>
     </main>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+    </footer>
 </body>
 <script src="../src/scripts/flavors.js"></script>
 </html>
