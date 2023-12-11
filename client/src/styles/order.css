@@ -15,6 +15,15 @@
 
     .menu__invisibleItem { display: grid; }
 
+    .form__deliverTo, 
+    .form__address,
+    .form__description,
+    .form__dates {
+
+        width: 500px;
+
+    }
+
     .footer { font-size: 1.1rem; }
 
 }
@@ -35,6 +44,15 @@
 
     .menu__invisibleItem { display: none; }
 
+    .form__deliverTo, 
+    .form__address,
+    .form__description,
+    .form__dates {
+
+        width: 100%;
+
+    }
+
     .footer { font-size: 1.1rem; }
 
 }
@@ -54,6 +72,15 @@
 
     .menu__invisibleItem { display: none; }
 
+    .form__deliverTo, 
+    .form__address,
+    .form__description,
+    .form__dates {
+
+        width: 100%;
+
+    }
+
     .footer { font-size: 0.9rem; }
 
 }
@@ -71,6 +98,15 @@
     .menu__fixed { display: none; }
 
     .menu__invisibleItem { display: none; }
+
+    .form__deliverTo, 
+    .form__address,
+    .form__description,
+    .form__dates {
+
+        width: 100%;
+
+    }
 
     .footer { font-size: 0.75rem; }
 
@@ -703,8 +739,9 @@ input[type=number] {
 .form__dates 
 {
 
-    width: 100%;
+    /* width: 100%; */
     white-space: nowrap;
+    max-width: 500px;
 
 }
 
