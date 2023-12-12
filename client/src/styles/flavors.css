@@ -672,6 +672,8 @@ main {
     font-family: var(--tiltNeon);
     font-size: 1.2rem;
     font-weight: bold;
+    text-decoration: none;
+    color: inherit;
 
     transition: all 1s;
 
