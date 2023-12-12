@@ -79,7 +79,7 @@ strawberryAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "pink"
         block.classList.add("cartBox")
         block.classList.add("strawberry")
@@ -109,7 +109,6 @@ strawberryAdd.addEventListener('click', () => {
         strawberryChangeQuantity(0)
         strawberryInCart = true
 
-        console.log(strawberrySavedPrice)
     }
 
 })
@@ -132,7 +131,7 @@ let chocolateSavedPrice = 0
 function chocolateChangePrice(n) {
 
     chocolatePrice = n * 300
-    chocolatePriceContainer.textContent  = `₱ ${chocolatePrice}.00`
+    chocolatePriceContainer.textContent = `₱ ${chocolatePrice}.00`
 
 }
 
@@ -146,12 +145,12 @@ function chocolateChangeQuantity(n) {
 }
 
 chocolateQuantityContainer.addEventListener('input', (e) => {
-    
-    if ( e.target.value > 10 ) {
+
+    if (e.target.value > 10) {
 
         chocolateChangeQuantity(10)
 
-    } else if ( e.target.value < 0 ) {
+    } else if (e.target.value < 0) {
 
         chocolateChangeQuantity(0)
 
@@ -164,18 +163,18 @@ chocolateQuantityContainer.addEventListener('input', (e) => {
 })
 
 chocolateDecrease.addEventListener('click', () => {
-    if (chocolateQuantity != 0 ) { 
+    if (chocolateQuantity != 0) {
 
-        chocolateChangeQuantity( chocolateQuantity - 1 )
-    
+        chocolateChangeQuantity(chocolateQuantity - 1)
+
     }
 
 })
 
 chocolateIncrease.addEventListener('click', () => {
-    if (chocolateQuantity != 10 ) { 
+    if (chocolateQuantity != 10) {
 
-        chocolateChangeQuantity( chocolateQuantity + 1 )
+        chocolateChangeQuantity(chocolateQuantity + 1)
 
 
     }
@@ -183,21 +182,40 @@ chocolateIncrease.addEventListener('click', () => {
 
 chocolateAdd.addEventListener('click', () => {
 
-    if ( chocolateInCart == false && chocolateQuantity != 0) {
+    if (chocolateInCart == false && chocolateQuantity != 0) {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#A7796D"
+        block.classList.add("cartBox")
         block.classList.add("chocolate")
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Chocolate"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= chocolateSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            chocolateInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += chocolatePrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
-    
-        chocolateInCart = true
+
+        chocolateSavedPrice = chocolatePrice
         chocolateChangeQuantity(0)
+        chocolateInCart = true
+
     }
 
 })
@@ -216,7 +234,6 @@ let cookiesncreamQuantity = 0
 const cookiesncreamAdd = document.querySelector(".menu__itemAddButton.cookiesncream")
 let cookiesncreamInCart = false
 let cookiesncreamSavedPrice = 0
-
 
 function cookiesncreamChangePrice(n) {
 
@@ -272,21 +289,40 @@ cookiesncreamIncrease.addEventListener('click', () => {
 
 cookiesncreamAdd.addEventListener('click', () => {
 
-    if ( cookiesncreamInCart == false && cookiesncreamQuantity != 0) {
+    if ( cookiesncreamInCart == false && cookiesncreamQuantity != 0 ) {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#d6c7bb"
+        block.classList.add("cartBox")
         block.classList.add("cookiesncream")
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Cookies & Cream"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= cookiesncreamSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            cookiesncreamInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += cookiesncreamPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        cookiesncreamInCart = true
+        cookiesncreamSavedPrice = cookiesncreamPrice
         cookiesncreamChangeQuantity(0)
+        cookiesncreamInCart = true
+
     }
 
 })
@@ -364,23 +400,41 @@ ubeAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#8878c3"
+        block.classList.add("cartBox")
         block.classList.add("ube")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Ube"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= ubeSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            ubeInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += ubePrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        ubeInCart = true
+        ubeSavedPrice = ubePrice
         ubeChangeQuantity(0)
+        ubeInCart = true
+
     }
 
 })
 
-/* melon */
+/* mango */
 const mangoDecrease = document.querySelector(".menu__quantityContainerDecrease.mango");
 const mangoIncrease = document.querySelector(".menu__quantityContainerIncrease.mango");
 
@@ -453,18 +507,36 @@ mangoAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#ffbf34"
+        block.classList.add("cartBox")
         block.classList.add("mango")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Mango"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= mangoSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            mangoInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += mangoPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        mangoInCart = true
+        mangoSavedPrice = mangoPrice
         mangoChangeQuantity(0)
+        mangoInCart = true
+
     }
 
 })
@@ -542,18 +614,36 @@ melonAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#febaad"
+        block.classList.add("cartBox")
         block.classList.add("melon")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Melon"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= melonSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            melonInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += melonPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        melonInCart = true
+        melonSavedPrice = melonPrice
         melonChangeQuantity(0)
+        melonInCart = true
+
     }
 
 })
@@ -631,18 +721,36 @@ bukoAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#d2fba4"
+        block.classList.add("cartBox")
         block.classList.add("buko")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Buko"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= bukoSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            bukoInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += bukoPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        bukoInCart = true
+        bukoSavedPrice = bukoPrice
         bukoChangeQuantity(0)
+        bukoInCart = true
+
     }
 
 })
@@ -720,18 +828,36 @@ bukoPandanAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#83ce89"
+        block.classList.add("cartBox")
         block.classList.add("bukoPandan")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Buko Pandan"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= bukoPandanSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            bukoPandanInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += bukoPandanPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        bukoPandanInCart = true
+        bukoPandanSavedPrice = bukoPandanPrice
         bukoPandanChangeQuantity(0)
+        bukoPandanInCart = true
+
     }
 
 })
@@ -809,18 +935,36 @@ langkaAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#f7c681"
+        block.classList.add("cartBox")
         block.classList.add("langka")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Langka"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= langkaSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            langkaInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += langkaPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        langkaInCart = true
+        langkaSavedPrice = langkaPrice
         langkaChangeQuantity(0)
+        langkaInCart = true
+
     }
 
 })
@@ -898,18 +1042,36 @@ macapunoAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#d89074"
+        block.classList.add("cartBox")
         block.classList.add("macapuno")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Macapuno"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= macapunoSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            macapunoInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += macapunoPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        macapunoInCart = true
+        macapunoSavedPrice = macapunoPrice
         macapunoChangeQuantity(0)
+        macapunoInCart = true
+
     }
 
 })
@@ -987,18 +1149,36 @@ avocadoAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#568203"
+        block.classList.add("cartBox")
         block.classList.add("avocado")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Avocado"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= avocadoSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            avocadoInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += avocadoPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        avocadoInCart = true
+        avocadoSavedPrice = avocadoPrice
         avocadoChangeQuantity(0)
+        avocadoInCart = true
+
     }
 
 })
@@ -1076,18 +1256,36 @@ cheeseAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#ffa600"
+        block.classList.add("cartBox")
         block.classList.add("cheese")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Cheese"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= cheeseSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            cheeseInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += cheesePrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        cheeseInCart = true
+        cheeseSavedPrice = cheesePrice
         cheeseChangeQuantity(0)
+        cheeseInCart = true
+
     }
 
 })
@@ -1106,7 +1304,6 @@ let bukoSherbetQuantity = 0
 const bukoSherbetAdd = document.querySelector(".menu__itemAddButton.bukoSherbet")
 let bukoSherbetInCart = false
 let bukoSherbetSavedPrice = 0
-
 
 function bukoSherbetChangePrice(n) {
 
@@ -1166,20 +1363,37 @@ bukoSherbetAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
+        // block.style.border = "1px darkslategray solid"
         block.style.backgroundColor = "#85FFBD"
         block.style.backgroundImage = "linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)"
-        
+        block.classList.add("cartBox")
         block.classList.add("bukoSherbet")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Buko Sherbet"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= bukoSherbetSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            bukoSherbetInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += bukoSherbetPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        bukoSherbetInCart = true
+        bukoSherbetSavedPrice = bukoSherbetPrice
         bukoSherbetChangeQuantity(0)
+        bukoSherbetInCart = true
+
     }
 
 })
@@ -1257,19 +1471,141 @@ bukoPandanSherbetAdd.addEventListener('click', () => {
         const block = document.createElement("span")
         block.style.width = "16px"
         block.style.height = "16px"
-        block.style.border = "1px darkslategray solid"
-        block.style.backgroundImage = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% )"
-        
+        // block.style.border = "1px darkslategray solid"
+        block.style.backgroundImage = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% )"        
+        block.classList.add("cartBox")
         block.classList.add("bukoPandanSherbet")
-        block.style.content = "U"
+
+        block.addEventListener("mouseover", () => {
+            itemIdentifier.textContent = "Buko Sherbet"
+        })
+
+        block.addEventListener("mouseout", () => {
+            itemIdentifier.textContent = ""
+        })
+
+        block.addEventListener("click", () => {
+            block.parentNode.removeChild(block)
+            itemIdentifier.textContent = ""
+            totalPrice -= bukoPandanSherbetSavedPrice
+            overallPrice.textContent = `₱ ${totalPrice}.00`
+            bukoPandanSherbetInCart = false
+        })
 
         cart.appendChild(block)
 
         totalPrice += bukoPandanSherbetPrice
         overallPrice.textContent = `₱ ${totalPrice}.00`
     
-        bukoPandanSherbetInCart = true
+        bukoPandanSherbetSavedPrice = bukoPandanSherbetPrice
         bukoPandanSherbetChangeQuantity(0)
+        bukoPandanSherbetInCart = true
+
     }
 
 })
+
+const checkout = document.querySelector(".menu__checkout")
+
+const popUp = document.querySelector(".popUp")
+
+const popUpCross = document.querySelector(".popUp__cross")
+
+const strawberry_order = document.querySelector("#strawberry_order")
+const chocolate_order = document.querySelector("#chocolate_order")
+const cac_order = document.querySelector("#cnc_order")
+const ube_order = document.querySelector("#ube_order")
+const mng_order = document.querySelector("#mng_order")
+const mln_order = document.querySelector("#mln_order")
+const bko_order = document.querySelector("#bko_order")
+const bkopndn_order = document.querySelector("#bkopndn_order")
+const lngk_order = document.querySelector("#lngk_order")
+const mcpn_order = document.querySelector("#mcpn_order")
+const avcd_order = document.querySelector("#avcd_order")
+const chs_order = document.querySelector("#chs_order")
+const bkoshrbt_order = document.querySelector("#bkoshrbt_order")
+const bkopndnshrbt_order = document.querySelector("#bkopndnshrbt_order")
+
+const total = document.querySelector("#popUp_total")
+
+const info = document.querySelector(".popUp__info")
+
+const input1 = document.querySelector("#input1")
+const input2 = document.querySelector("#input2")
+const input3 = document.querySelector("#input3")
+const input4 = document.querySelector("#input4")
+const input5 = document.querySelector("#input5")
+const input6 = document.querySelector("#input6")
+const input7 = document.querySelector("#input7")
+const input8 = document.querySelector("#input8")
+const input9 = document.querySelector("#input9")
+
+checkout.addEventListener("click", (e) => {
+    e.preventDefault()
+
+    popUp.style.display = "flex";
+
+    strawberry_order.textContent = `STRWBRY: ${strawberrySavedPrice / 300} gallons (₱${strawberrySavedPrice})`
+    chocolate_order.textContent = `CHCLT: ${chocolateSavedPrice / 300} gallons (₱${chocolateSavedPrice})`
+    cac_order.textContent = `CKS&CRM: ${cookiesncreamSavedPrice / 300} gallons (₱${cookiesncreamSavedPrice})`
+    ube_order.textContent = `UBE: ${ubeSavedPrice / 300} gallons (₱${ubeSavedPrice})`
+    mng_order.textContent = `MNG: ${mangoSavedPrice / 300} gallons (₱${mangoSavedPrice})`
+    mln_order.textContent = `MLN: ${melonSavedPrice / 300} gallons (₱${melonSavedPrice})`
+    bko_order.textContent = `BKO: ${bukoSavedPrice / 300} gallons (₱${bukoSavedPrice})`
+    bkopndn_order.textContent = `BKOPNDN: ${bukoPandanSavedPrice / 300} gallons (₱${bukoPandanSavedPrice})`
+    lngk_order.textContent = `LNGK: ${langkaSavedPrice / 300} gallons (₱${langkaSavedPrice})`
+    mcpn_order.textContent = `MCPN: ${macapunoSavedPrice / 300} gallons (₱${macapunoSavedPrice})`
+    avcd_order.textContent = `AVCD: ${avocadoSavedPrice / 300} gallons (₱${avocadoSavedPrice})`
+    chs_order.textContent = `CHS: ${cheeseSavedPrice / 300} gallons (₱${cheeseSavedPrice})`
+    bkoshrbt_order.textContent = `BKO SHRBT: ${bukoSherbetSavedPrice / 300} gallons (₱${bukoSherbetSavedPrice})`
+    bkopndnshrbt_order.textContent = `BKOPNDN SHRBT: ${bukoPandanSherbetSavedPrice / 300} gallons (₱${bukoPandanSherbetSavedPrice})`
+
+    total.textContent = `TOTAL: ₱${totalPrice}.00`
+
+    info.textContent = `${input1.value} ${input2.value} • ${input3.value} • ${input4.value} • ${input5.value} • ${input6.value} • ${input7.value} • DELIVER FROM ${input8.value} TO ${input9.value}`
+
+    input1.value = "";
+    input2.value = "";
+    input3.value = "";
+    input4.value = "";
+    input5.value = "";
+    input6.value = "";
+    input7.value = "";
+    input8.value = "";
+    input9.value = "";
+
+    strawberryChangeQuantity(0)
+    chocolateChangeQuantity(0)
+    cookiesncreamChangeQuantity(0)
+    ubeChangeQuantity(0)
+    mangoChangeQuantity(0)
+    melonChangeQuantity(0)
+    bukoChangeQuantity(0)
+    bukoPandanChangeQuantity(0)
+    langkaChangeQuantity(0)
+    macapunoChangeQuantity(0)
+    avocadoChangeQuantity(0)
+    cheeseChangeQuantity(0)
+    bukoSherbetChangeQuantity(0)
+    bukoPandanChangeQuantity(0)
+
+    totalPrice = 0
+    overallPrice.textContent = `₱0.00`
+
+    cart.innerHTML = ''
+
+})
+
+popUpCross.addEventListener('click', () => {
+    popUp.style.display = "none";
+})
+
+$('.menu-toggle').click(function(){
+    $(".nav").toggleClass("mobile-nav");
+    $(this).toggleClass("is-active");
+  });
+
+//   block.style.backgroundColor = "#85FFBD"
+//   block.style.backgroundImage = "linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%)"
+
+// block.style.backgroundImage = "radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% )"

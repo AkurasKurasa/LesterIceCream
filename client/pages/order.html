@@ -5,21 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lester's Ice Cream</title>
     <link rel="stylesheet" href="../src/styles/order.css">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" sizes="32x32" type="image/x-icon">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
-    <nav class="">
-        <ul class="">
-            <li><a class="navigation__links" href="./index.html">Home</a></li>
-            <li><a class="navigation__links" href="./flavors.html">Flavors</a></li>
-            <li><a class="navigation__links" href="./process.html">Process</a></li>
-        </ul>
 
-        <img src="" alt="Lesters" class="logo">
-
-        <ul class="">
-            <li style="box-shadow: 0px -5px 0px 0px rgba(255,192,203,0.75) inset;"><a style="color: var(--currentPrimary);" class="navigation__links" href="./order.html">Order</a></li>
-            <li><a class="navigation__links" href="./contact.html">Contact</a></li>
-            <li><a class="navigation__links" href="./about.html">About</a></li>
+    <nav class="navbar">
+        <img src="" alt="LESTER'S">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="../pages/index.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/flavors.html">Flavors</a></li>
+          <li class="nav-item"><a href="../pages/process.html">Process</a></li>
+          <li class="nav-item"><a href="../pages/order.html">Order</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a href="../pages/about.html">About</a></li>
         </ul>
     </nav>
 
@@ -132,7 +136,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/mango_icecream.png" class="menu__itemImage menu__itemMango">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -155,7 +159,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/melon_icecream.png" class="menu__itemImage menu__itemMelon">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -178,7 +182,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/buko_icecream.png" class="menu__itemImage menu__itemBuko">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -201,7 +205,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/bukoPandan_icecream.png" class="menu__itemImage menu__itemBukoPandan">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -224,7 +228,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/langka_icecream.png" class="menu__itemImage menu__itemLangka">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -247,7 +251,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/macapuno_icecream.png" class="menu__itemImage menu__itemMacapuno">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -270,7 +274,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/avocado_icecream.png" class="menu__itemImage menu__itemAvocado">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -294,7 +298,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/cheese_icecream.png" class="menu__itemImage menu__itemCheese">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -323,7 +327,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/buko_sherbet.png" class="menu__itemImage menu__itemBukoSherbet">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -346,7 +350,7 @@
 
                     <div class="menu__item">
                         <div class="menu__itemImageContainer">
-                            <img src="../assets/images/ice_cream/strawberry_icecream.png" class="menu__itemImage">
+                            <img src="../assets/images/ice_cream/bukoPandan_sherbet.png" class="menu__itemImage menu__itemBukoPandanSherbet">
                         </div>
                         <div class="menu__itemInfo">
 
@@ -396,31 +400,31 @@
 
                 <span class="menu__overallPrice"> &#8369;0.00 </span>
 
-                <form action="" class="menu__form">
+                <form action="" class="menu__form" onsubmit="return false">
 
                     <div class="form__deliverTo">
                         <h4>DELIVER TO</h4>
-                        <input type="text" placeholder="FIRST NAME" style="width: 50%;">
-                        <input type="text" placeholder="LAST NAME" style="width: 49.2%;">
+                        <input type="text" placeholder="FIRST NAME" style="width: 50%;" id="input1" required>
+                        <input type="text" placeholder="LAST NAME" style="width: 49.2%;" id="input2">
                     </div>
 
                     <div class="form__address">
                         <h4>ADDRESS</h4>
-                        <input type="text" placeholder="STREET ADDRESS" style="display: block; width: 100%;">
-                        <input type="text" placeholder="STREET ADDRESS 2" style="display: block; width: 100%;">
-                        <input type="text" placeholder="CITY" style="width: 50%;">
-                        <input type="text" placeholder="REGION" style="width: 49.2%;">
+                        <input type="text" placeholder="STREET ADDRESS" style="display: block; width: 100%;" id="input3">
+                        <input type="text" placeholder="STREET ADDRESS 2" style="display: block; width: 100%;" id="input4">
+                        <input type="text" placeholder="CITY" style="width: 50%;" id="input5">
+                        <input type="text" placeholder="REGION" style="width: 49.2%;" id="input6">
                     </div>
 
                     <div class="form__description">
                         <h4>DESCRIPTION</h4>
-                        <textarea placeholder="DESCRIPTION" cols="30" rows="10" style="width: 100%; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);"></textarea>
+                        <textarea placeholder="DESCRIPTION" cols="30" rows="10" style="width: 100%; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);" id="input7"></textarea>
                     </div>
 
                     <div class="form__dates">
-                        <h4>DATES</h4>
-                        <input type="date" placeholder="DATE OF ORDER" style="width: 50%;">
-                        <input type="date" placeholder="PREFERRED DATE OF DELIVERY" style="width: 49.2%;">
+                        <h4>DATES (RANGE OF AVAILABLE DAYS)</h4>
+                        <input type="date" placeholder="DATE OF ORDER" style="width: 50%;" id="input8">
+                        <input type="date" placeholder="PREFERRED DATE OF DELIVERY" style="width: 49.2%;" id="input9">
                     </div>
 
                     <button class="menu__checkout">CHECKOUT</button>
@@ -451,10 +455,41 @@
 
         </section>
 
+        <div class="popUp">
+            <img src="../assets/icons/cross.svg" alt="" width="48px" height="48px" class="popUp__cross">
+            <span class="popUp__orderNum">ORDER #000000</span>
+            <h1 style="margin-top: 4rem;">Order</h1>
+
+            <div class="popUp__orders">
+                <span id="strawberry_order">STRWBRY:</span> <br>
+                <span id="chocolate_order">CHCLT:</span> <br>
+                <span id="cnc_order">CKS&CRM:</span> <br>
+                <span id="ube_order">UBE:</span> <br>
+                <span id="mng_order">MNG:</span> <br>
+                <span id="mln_order">MLN:</span> <br>
+                <span id="bko_order">BKO:</span> <br>
+                <span id="bkopndn_order">BKOPNDN:</span> <br>
+                <span id="lngk_order">LNGK:</span> <br>
+                <span id="mcpn_order">MCPN:</span> <br>
+                <span id="avcd_order">AVCD:</span> <br>
+                <span id="chs_order">CHS:</span> <br>
+                <span id="bkoshrbt_order">BKO SHRBT:</span> <br>
+                <span id="bkopndnshrbt_order">BKOPNDN SHRBT:</span>
+            </div>
+
+            <h1 style="margin-top: 2rem;" id="popUp_total">Total: </h1>
+
+            <h1 style="margin-top: 2rem;">DELIVERY INFO</h1>
+
+            <div class="popUp__info" style="margin: 1rem;"></div>
+
+            
+        </div>
+
     </main>
 
     <footer class="footer">
-        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="./contact.html" class="footer__link">Contact Us</a></p>
     </footer>
 
 </body>

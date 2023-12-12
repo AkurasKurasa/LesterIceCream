@@ -4,25 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lester's Ice Cream</title>
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" sizes="32x32" type="image/x-icon">
     <link rel="stylesheet" href="../src/styles/about.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 
-    <nav class="">
-        <ul class="">
-            <li><a class="navigation__links" href="./index.html">Home</a></li>
-            <li><a class="navigation__links" href="./flavors.html">Flavors</a></li>
-            <li><a class="navigation__links" href="./process.html">Process</a></li>
+    <nav class="navbar">
+        <img src="" alt="LESTER'S">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="../pages/index.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/flavors.html">Flavors</a></li>
+          <li class="nav-item"><a href="../pages/process.html">Process</a></li>
+          <li class="nav-item"><a href="../pages/order.html">Order</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a href="../pages/about.html">About</a></li>
         </ul>
-
-        <img src="" alt="Lesters" class="logo">
-
-        <ul class="">
-            <li><a class="navigation__links" href="./order.html">Order</a></li>
-            <li><a class="navigation__links" href="./contact.html">Contact</a></li>
-            <li style="box-shadow: 0px -5px 0px 0px rgba(255,192,203,0.75) inset;"><a class="navigation__links" href="./about.html" style="color: var(--currentPrimary);">About</a></li>
-        </ul>
-    </nav>
+    </nav>      
 
     <main>
 
@@ -142,7 +145,7 @@
     
                 <div class="quesion">
                   <h3>What if I am allergic to a certain ingredient ?</h3>
-                  <svg viewBox="0 0 320 512" width="15" title="angle-down" style="fill: black;">
+                  <svg viewBox="0 0 320 512" width="15" title="angle-down">
               <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
             </svg>
                 </div>
@@ -158,7 +161,7 @@
                 
                 <div class="quesion">
                   <h3>Do you have ice cream for those who are lactose intolerant ?</h3>
-                  <svg viewBox="0 0 320 512" width="15" title="angle-down" style="fill: black;">
+                  <svg viewBox="0 0 320 512" width="15" title="angle-down">
               <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
             </svg>
                 </div>
@@ -174,7 +177,7 @@
                 
                 <div class="quesion">
                   <h3>Do you make custom ice-cream flavors ?</h3>
-                  <svg viewBox="0 0 320 512" width="15" title="angle-down" style="fill: black;">
+                  <svg viewBox="0 0 320 512" width="15" title="angle-down">
               <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
             </svg>
                 </div>
@@ -190,7 +193,7 @@
                 
                 <div class="quesion">
                   <h3>Do you have any gluten-free options ?</h3>
-                  <svg viewBox="0 0 320 512" width="15" title="angle-down" style="fill: black;">
+                  <svg viewBox="0 0 320 512" width="15" title="angle-down">
                     <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
                     </svg>
                 </div>
@@ -206,7 +209,7 @@
                 
                 <div class="quesion">
                   <h3>Do you deliver outside of Pampanga ?</h3>
-                  <svg viewBox="0 0 320 512" width="15" title="angle-down" style="fill: black;">
+                  <svg viewBox="0 0 320 512" width="15" title="angle-down">
                     <path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" />
                     </svg>
                 </div>
@@ -222,7 +225,7 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="./contact.html" class="footer__link">Contact Us</a></p>
     </footer>
     
 </body>

@@ -13,6 +13,8 @@ milkBackward.addEventListener("click", () => {
     
     if (milkSlideIndex > 0) { 
         milkShowSlide(milkSlideIndex - 1)
+    } else if (milkSlideIndex == ( 0 )) {
+        milkShowSlide( milkSlides.length - 1 )
     }
 
 })
@@ -52,6 +54,8 @@ environmentBackward.addEventListener("click", () => {
     
     if (environmentSlideIndex > 0) { 
         environmentShowSlide(environmentSlideIndex - 1)
+    } else if (environmentSlideIndex == ( 0 )) {
+        environmentShowSlide( environmentSlides.length - 1 )
     }
 
 })
@@ -91,6 +95,8 @@ ingredientsBackward.addEventListener("click", () => {
     
     if (ingredientsSlideIndex > 0) { 
         ingredientsShowSlide(ingredientsSlideIndex - 1)
+    } else if (ingredientsSlideIndexSlideIndex == ( 0 )) {
+        ingredientsShowSlide( ingredientsSlides.length - 1 )
     }
 
 })
@@ -130,6 +136,8 @@ iceBackward.addEventListener("click", () => {
     
     if (iceSlideIndex > 0) { 
         iceShowSlide(iceSlideIndex - 1)
+    } else if (iceSlideIndex == ( 0 )) {
+        iceShowSlide( iceSlides.length - 1 )
     }
 
 })
@@ -169,6 +177,8 @@ localBackward.addEventListener("click", () => {
     
     if (localSlideIndex > 0) { 
         localShowSlide(localSlideIndex - 1)
+    } else if (localSlideIndex == ( 0 )) {
+        localShowSlide( localSlides.length - 1 )
     }
 
 })
@@ -208,6 +218,8 @@ conesBackward.addEventListener("click", () => {
     
     if (conesSlideIndex > 0) { 
         conesShowSlide(conesSlideIndex - 1)
+    } else if (conesSlideIndex == ( 0 )) {
+        conesShowSlide( conesSlides.length - 1 )
     }
 
 })

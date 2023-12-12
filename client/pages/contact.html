@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Lester's Ice Cream</title>
     <link rel="stylesheet" href="../src/styles/contact.css">
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" sizes="32x32" type="image/x-icon">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 <body>
 
-    <nav class="">
-        <ul class="">
-            <li><a class="navigation__links" href="./index.html">Home</a></li>
-            <li><a class="navigation__links" href="./flavors.html">Flavors</a></li>
-            <li><a class="navigation__links" href="./process.html">Process</a></li>
-        </ul>
-
-        <img src="" alt="Lesters" class="logo">
-
-        <ul class="">
-            <li><a class="navigation__links" href="./order.html">Order</a></li>
-            <li style="box-shadow: 0px -5px 0px 0px rgba(255,192,203,0.75) inset;"><a class="navigation__links" style="color: var(--currentPrimary);" href="./contact.html">Contact</a></li>
-            <li><a class="navigation__links" href="./about.html">About</a></li>
+    <nav class="navbar">
+        <img src="" alt="LESTER'S">
+        <div class="menu-toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav no-search">
+          <li class="nav-item"><a href="../pages/index.html">Home</a></li>
+          <li class="nav-item"><a href="../pages/flavors.html">Flavors</a></li>
+          <li class="nav-item"><a href="../pages/process.html">Process</a></li>
+          <li class="nav-item"><a href="../pages/order.html">Order</a></li>
+          <li class="nav-item"><a href="../pages/contact.html">Contact</a></li>
+          <li class="nav-item"><a href="../pages/about.html">About</a></li>
         </ul>
     </nav>
 
@@ -40,18 +43,18 @@
                 <form class="contact__form">
 
                     <div class="form__nameWrapper">
-                        <input type="text" style="display: inline; width: 50%;" placeholder="FIRST NAME">
-                        <input type="text" style="display: inline; width: 49.2%;" placeholder="LAST NAME" class="form__lastName">
+                        <input type="text" style="display: inline; width: 50%;" placeholder="FIRST NAME" id="input1" required>
+                        <input type="text" style="display: inline; width: 49.2%;" placeholder="LAST NAME" class="form__lastName" id="input2" required>
                     </div>
 
                     <div class="form__emailWrapper">
-                        <input type="email" style="width: 100%;" placeholder="EMAIL">
+                        <input type="email" style="width: 100%;" placeholder="EMAIL" id="input3" required>
                     </div>
 
-                    <textarea cols="30" rows="10" style="height: 210px; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);" placeholder="MESSAGE" ></textarea>
+                    <textarea cols="30" rows="10" style="height: 210px; resize: none; outline: none; padding: 1rem; font-family: var(--tiltNeon);" placeholder="MESSAGE" id="input4"></textarea>
 
                     <div class="form__buttonWrapper">
-                        <button type="submit">SEND</button>
+                        <button type="submit" id="form-submit">SEND</button>
                         <button type="reset">CLEAR</button>
                     </div>
                 </form>
@@ -76,7 +79,7 @@
             <div class="layout__locationInfo">
 
                 <h1 class="locationInfo__heading">OUR LOCATION!</h1>
-                <address class="locationInfo__address">Madapdap, Mabalacat, Pampanga</address>
+                <address class="locationInfo__address">Blk 102, Lot 42, 25-E St., Phase 3, Madapdap, Mabalacat, Pampanga</address>
 
             </div>
 
@@ -100,8 +103,10 @@
     </main>
 
     <footer class="footer">
-        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="" class="footer__link">Contact Us</a></p>
+        <p class="footer__text">&copy; 2023 Lester's Ice Cream | All Rights Reserved | <a href="./contact.html" class="footer__link">Contact Us</a></p>
     </footer>
     
 </body>
+
+<script src="../src/scripts/contact.js"></script>
 </html>

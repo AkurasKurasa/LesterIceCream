@@ -5,3 +5,8 @@ containers.forEach((container) => {
     container.classList.toggle('active');
   });
 });
+
+$('.menu-toggle').click(function(){
+  $(".nav").toggleClass("mobile-nav");
+  $(this).toggleClass("is-active");
+});

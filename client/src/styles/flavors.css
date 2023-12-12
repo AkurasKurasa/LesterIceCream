@@ -13,6 +13,12 @@
 
     .flavor__info { width: 95%; }
 
+    .flavors__menuWrapper { min-height: 4000px; }
+
+    .flavor__image { display: block; }
+
+    .flavor__info__content { height: fit-content; }
+
     .footer { font-size: 1.1rem; }
 
 }
@@ -31,6 +37,12 @@
 
     .flavor__info { width: 95%; }
 
+    .flavors__menuWrapper { min-height: 3800px; }
+
+    .flavor__image { display: block; }
+
+    .flavor__info__content { height: fit-content; }
+
     .footer { font-size: 1.1rem; }
 
 }
@@ -48,6 +60,12 @@
 
     .flavor__info { width: 70%; }
 
+    .flavors__menuWrapper { min-height: 3500px; }
+
+    .flavor__image { display: none; }
+
+    .flavor__info__content { height: 60%; }
+
     .footer { font-size: 0.9rem; }
 
 }
@@ -63,6 +81,10 @@
     .flavor { width: 360px; height: 160px; }
 
     .flavor__info { width: 60%; }
+
+    .flavor__image { display: none; }
+
+    .flavor__info__content { height: 60%; }
 
     .footer { font-size: 0.75rem; }
 
@@ -147,27 +169,29 @@ main {
 }
 
 
-/* NAVIGATION */
-
 .navbar {
     display: grid;
     grid-template-columns: 1fr 3fr;
     align-items: center;
-    height: 50px;
+    height: 60px;
     width: 100vw;
     overflow: hidden;
     position: absolute;
-    z-index: 1;
-    background-color: white;
+    z-index: 5;
+    background-color: var(--secondary);
 
     }
 
     .navbar img {
-    height: 16px;
     width: auto;
     justify-self: start;
-    margin-left: 20px;
-    }
+    margin-left: 30px;
+    font-family: var(--lato);
+    font-size: 28px;
+    font-weight: 700;
+    color: snow;
+    letter-spacing: -1px;
+}
 
     .navbar ul {
     list-style: none;
@@ -177,16 +201,20 @@ main {
 
     }
 
+    .nav-item { text-align: center; }
+
     .nav-item a {
-    color: #000;
-    font-size: 0.9rem;
-    font-weight: 400;
+    color: snow;
+    font-family: var(--lato);
+    font-size: 12px;
+    font-weight: 600;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color 0.3s ease-out;
     }
 
     .nav-item a:hover {
-    color: #3498db;
+    color: #F8DB78;
     }
 
     /* SEARCH FUNCTION */
@@ -242,7 +270,7 @@ main {
     .menu-toggle .bar{
     width: 25px;
     height: 3px;
-    background-color: #3f3f3f;
+    background-color: snow;
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
@@ -348,8 +376,8 @@ main {
         flex-direction: column;
         position: fixed;
         justify-content: start;
-        top: 50px;
-        background-color: #fff;
+        top: 60px;
+        background-color: snow;
         width: 100%;
         height: calc(100vh - 55px);
         transform: translate(-101%);
@@ -358,7 +386,7 @@ main {
     }
 
     .navbar li {
-        padding: 15px;
+        padding: 10px;
     }
 
     .navbar li:first-child {
@@ -367,6 +395,7 @@ main {
 
     .navbar li a {
         font-size: 1rem;
+        color: black !important;
     }
         
     .menu-toggle, .bar {
@@ -406,9 +435,7 @@ main {
     .search-input {
     display: none;
     }
-}    
-
-
+}
 
 .flavors__header {
 
@@ -434,7 +461,7 @@ main {
 
 .flavors__title {
 
-    background-color: var(--strawberryPrimary);
+    background-color: var(--primary);
 
     display: flex;
     align-items: center;
@@ -457,7 +484,7 @@ main {
 
     padding: 0 0.5rem 0.5rem 0.5rem;
 
-    background-color: var(--strawberryPrimary);
+    background-color: var(--primary);
 
     overflow: hidden;
 
@@ -467,7 +494,7 @@ main {
 
     background-color: snow;
 
-    min-height: 4000px;
+    /* min-height: 3800px; */
 
     display: flex;
     align-items: center;
@@ -505,11 +532,7 @@ main {
 
     box-shadow: 0.5px -0.5px 4px 0.5px rgba(0,0,0,0.40);
 
-    /* border-radius: 12px; */
-
-    /* background-color: bisque; */
-
-    /* background-image: url("../../assets/images/testimg.png"); */
+    min-width: 412px;
 
     display: flex;
     align-items: center;
@@ -606,23 +629,17 @@ main {
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 550px;
-    height: fit-content;
-
+    max-width: 550px;
+    /* height: 60%; */
     background-color: transparent;
-
     text-align: justify;
-
     line-height: 1.8rem;
-
     backdrop-filter: blur(20px);
-
     font-family: var(--volkorn);
-
     z-index: 1;
-
-    /* border: 1px black solid; */
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 }
 
@@ -754,6 +771,7 @@ main {
 
 #chocolate_flavor_IC {
     color: var(--chocolateTextHover);
+    background-image: url("../../assets/images/flavors/chocolate_banner.jpg");
 }
 
 .flavor__info.chocolate_flavor {
@@ -791,6 +809,7 @@ main {
 
 #cookiesncream_flavor_IC {
     color: var(--cookiesNcreamTextHover);
+    background-image: url("../../assets/images/flavors/cookies_and_cream_banner.jpg");
 }
 
 .flavor__info.cookiesncream_flavor {
@@ -828,6 +847,7 @@ main {
 
 #ube_flavor_IC {
     color: var(--ubeTextHover);
+    background-image: url("../../assets/images/flavors/ube_banner.jpg");
 }
 
 .flavor__info.ube_flavor {
@@ -864,6 +884,7 @@ main {
 
 #mango_flavor_IC {
     color: var(--mangoTextHover);
+    background-image: url("../../assets/images/flavors/mango_banner.jpg");
 }
 
 .flavor__info.mango_flavor {
@@ -899,6 +920,7 @@ main {
 
 #melon_flavor_IC {
     color: var(--melonTextHover);
+    background-image: url("../../assets/images/flavors/melon_banner.jpg");
 }
 
 .flavor__info.melon_flavor {
@@ -936,6 +958,7 @@ main {
 
 #buko_flavor_IC, #buko_flavorsh_SH {
     color: var(--bukoTextHover);
+    background-image: url("../../assets/images/flavors/buko_banner.jpg");
 }
 
 .flavor__info.buko_flavor,  .flavor__info.buko_flavorsh{
@@ -971,6 +994,7 @@ main {
 
 #bukoPandan_flavor_IC, #bukoPandan_flavorsh_SH {
     color: var(--bukoPandanTextHover);
+    background-image: url("../../assets/images/flavors/buko_pandan_banner.jpg");
 }
 
 .flavor__info.bukoPandan_flavor, .flavor__info.bukoPandan_flavorsh {
@@ -1007,6 +1031,7 @@ main {
 
 #langka_flavor_IC {
     color: var(--langkaTextHover);
+    background-image: url("../../assets/images/flavors/langka_banner.jpg");
 }
 
 .flavor__info.langka_flavor {
@@ -1044,6 +1069,7 @@ main {
 
 #macapuno_flavor_IC {
     color: var(--macapunoTextHover);
+    background-image: url("../../assets/images/flavors/macapuno_banner.jpg");
 }
 
 .flavor__info.macapuno_flavor {
@@ -1081,6 +1107,7 @@ main {
 
 #avocado_flavor_IC {
     color: var(--avocadoTextHover);
+    background-image: url("../../assets/images/flavors/avocado_banner.jpg");
 }
 
 .flavor__info.avocado_flavor {
@@ -1118,10 +1145,10 @@ main {
 
 #cheese_flavor_IC {
     color: var(--cheeseTextHover);
+    background-image: url("../../assets/images/flavors/cheese_banner.jpg");
 }
 
 .flavor__info.cheese_flavor {
-    /* box-shadow: 5px 0px 0px 0px pink inset, -5px 0px 0px 0px pink inset, 0px -5px 0px 0px pink inset; */
 
     border-right: 5px var(--cheesePrimary) solid;
     border-left: 5px var(--cheesePrimary) solid;
@@ -1151,6 +1178,21 @@ main {
     opacity: 28%;
 
     transform: scale(0.55);
+}
+
+#buko_flavorsh_SH {
+
+    color: var(--bukoTextHover);
+    background-image: url("../../assets/images/flavors/buko_sherbet_banner.jpg");
+
+
+}
+
+#bukoPandan_flavorsh_SH {
+
+    color: var(--bukoPandanTextHover);
+    background-image: url("../../assets/images/flavors/buko_pandan_sherbet_banner.jpg");
+
 }
 
 .footer {
@@ -1184,8 +1226,6 @@ main {
 
 .footer__link:hover {
 
-    color: rgb(251, 103, 128);
+    color: var(--primary);
 
 }
-
-/* JS classes */
