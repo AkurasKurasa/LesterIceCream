@@ -600,7 +600,7 @@ a { text-decoration: none;}
 
     }
 
-    .navbar img {
+    .navbar .logo {
     width: auto;
     justify-self: start;
     margin-left: 30px;
