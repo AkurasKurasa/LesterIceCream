@@ -95,7 +95,7 @@ ingredientsBackward.addEventListener("click", () => {
     
     if (ingredientsSlideIndex > 0) { 
         ingredientsShowSlide(ingredientsSlideIndex - 1)
-    } else if (ingredientsSlideIndexSlideIndex == ( 0 )) {
+    } else if (ingredientsSlideIndex == ( 0 )) {
         ingredientsShowSlide( ingredientsSlides.length - 1 )
     }
 
